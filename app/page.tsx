@@ -517,17 +517,17 @@ export default function Home() {
 
       {/* HERO */}
       <main id="top">
-        <section className="relative max-w-6xl mx-auto px-5 pt-16 md:pt-24 pb-14 grid lg:grid-cols-[1.05fr_1fr] gap-12 items-center">
-          <div className={reduced ? "" : "animate-fadeUp"}>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 mb-6">
+        <section className="relative max-w-6xl mx-auto px-5 py-12 min-h-[calc(100svh-4rem)] grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-12 items-center">
+          <div className={`min-w-0 ${reduced ? "" : "animate-fadeUp"}`}>
+            <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 mb-6 max-w-full">
               <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: BULL }} />
               <span className="font-mono text-[11px] text-white/60">FREE COURSE · NO SIGNUP WALLS · NO SIGNAL SELLING</span>
             </div>
-            <h1 className="font-black tracking-[-0.03em] leading-[0.95] text-[clamp(2.6rem,7vw,4.6rem)]">
+            <h1 className="font-black tracking-[-0.03em] leading-[0.95] text-[clamp(2.4rem,7vw,4.6rem)]">
               Learn to read
-              <br />
+              <br className="hidden sm:block" />{" "}
               the market <span style={{ color: BULL }}>candle</span>
-              <br />
+              <br className="hidden sm:block" />{" "}
               by <span style={{ color: BEAR }}>candle</span>.
             </h1>
             <p className="mt-6 text-white/55 text-base md:text-lg leading-relaxed max-w-md">
@@ -553,7 +553,7 @@ export default function Home() {
               <SessionRow />
             </div>
           </div>
-          <div className={reduced ? "" : "animate-fadeUp [animation-delay:150ms]"}>
+          <div className={`min-w-0 ${reduced ? "" : "animate-fadeUp [animation-delay:150ms]"}`}>
             <LiveChart reduced={reduced} />
           </div>
         </section>
@@ -561,7 +561,7 @@ export default function Home() {
         <Ticker reduced={reduced} />
 
         {/* NUMBERS */}
-        <section className="max-w-6xl mx-auto px-5 py-14 grid grid-cols-2 md:grid-cols-4 gap-6" data-reveal>
+        <section className="max-w-6xl mx-auto px-5 py-16 grid grid-cols-2 md:grid-cols-4 gap-6" data-reveal>
           {[
             ["$7.5T", "traded every single day — the largest market on earth"],
             ["24/5", "open around the clock, Monday to Friday"],
@@ -576,7 +576,7 @@ export default function Home() {
         </section>
 
         {/* CURRICULUM */}
-        <section id="curriculum" className="max-w-6xl mx-auto px-5 py-16 scroll-mt-20">
+        <section id="curriculum" className="max-w-6xl mx-auto px-5 py-20 scroll-mt-20">
           <div className="mb-10" data-reveal>
             <p className="font-mono text-xs tracking-widest mb-3 text-bull">THE CURRICULUM</p>
             <h2 className="font-black tracking-tight text-3xl md:text-5xl leading-tight">
@@ -636,7 +636,7 @@ export default function Home() {
         </section>
 
         {/* TOOLS */}
-        <section id="tools" className="max-w-6xl mx-auto px-5 py-16 scroll-mt-20">
+        <section id="tools" className="max-w-6xl mx-auto px-5 py-20 scroll-mt-20">
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 items-start">
             <div data-reveal>
               <p className="font-mono text-xs tracking-widest mb-3 text-bull">HANDS-ON TOOLS</p>
@@ -695,7 +695,7 @@ export default function Home() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="max-w-3xl mx-auto px-5 py-16 scroll-mt-20" data-reveal>
+        <section id="faq" className="max-w-3xl mx-auto px-5 py-20 scroll-mt-20" data-reveal>
           <p className="font-mono text-xs tracking-widest mb-3 text-center text-bull">QUESTIONS</p>
           <h2 className="font-black tracking-tight text-3xl md:text-4xl text-center mb-10">Straight answers only.</h2>
           <div>
